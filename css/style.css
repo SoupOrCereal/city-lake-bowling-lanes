@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background: blue;
+}
+
+header{
+    width: 100%;
+    height: 88%;
+    background: red;
+    background-image: url("../img/header.jpeg");
+    background-size: cover;
+}
+
+nav{
+    text-align: center;
+    font-size: 5rem;
+    margin-top: -6rem;
+    margin-bottom: 1rem;
+}
+
+nav a{
+    background-color: purple;
+}
+
+section{
+    display: none;
+}
+
+footer{
+    text-align: center;
+}
+
+.footer-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.footer-info div{
+    background-color: grey;
+    font-size: 1.5rem;
+    flex-grow: 1;
+}
