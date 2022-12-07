@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Created by Justin Sargent - December 2022 - github.com/SoupOrCereal -->
 <html>
     <head>
         <title>City Lake Bowling Lanes</title>
@@ -6,14 +7,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather&family=Radio+Canada&display=swap">
     </head>
     <body>
 
-<!-- thinking index header img is full + nav below, then use 'banner esque' header, nav below -->
-
         <header>
             <h1>City Lake Bowling Lanes</h1>
-            <p>Open till 8pm</p>
+            <p id="open-closed"><span class="open-color">Open</span> till 8pm</p>
+            <div id="footer-info-placeholder"></div>
         </header>
 
         <nav>
@@ -27,24 +28,24 @@
         </section>
           
         <footer>
-            <div class="footer-info">
+            <div id="footer-info">
                 <div>
-                    <p>Location</p>
-                    <p>4200 Pin Way<br />Lake City, PA, 16423</p>
+                    <p id="location"><strong>Location</strong><br />¯</p>
+                    <p><a href="https://www.bing.com/maps?osid=6c285106-bc30-4ff0-b92d-e10e2638c45d&cp=42.015285%7E-80.352064&lvl=12.6&v=2&sV=2&form=S00027" target="_blank">4200 Pin Way<br />Lake City, PA, 16423</a></p>
                 </div>
                 <div>
-                    <p>Hours</p>
+                    <p id="hours"><strong>Hours</strong><br />¯</p>
                     <p>Mon-Thu 4pm till 10pm<br />Fri-Sun 1pm till 3am</p>
                 </div>
                 <div>
-                    <p>Contact</p>
-                    <p>Call (814)316-2168<br />eMail@CityLakeLanes.com</p>
+                    <p id="contact"><strong>Contact</strong><br />¯</p>
+                    <p><a href="tel:+18143162168">Call (814)316-2168</a><br /><a href="mailto:eMail@CityLakeLanes.com?subject=About City Lake Bowling Lanes">eMail@CityLakeLanes.com</a></p>
                 </div>
             </div>
 
-            <p>This a bowling alley demo website created by Justin Sargent.</p>
+            <p>This bowling alley demo website was created by <a href="https://github.com/SoupOrCereal" target="_blank">Justin Sargent</a>.</p>
         </footer>
         
-        <script src="" async defer></script>
+        <script src="js/indexStyling.js" async defer></script>
     </body>
 </html>

@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    font-family: 'Merriweather', serif;
 }
 
 html, body{
@@ -14,17 +15,64 @@ header{
     background: red;
     background-image: url("../img/header.jpeg");
     background-size: cover;
+    text-align: center;
+}
+
+header h1{
+    font-size: 5rem;
+    padding-top: 0.332rem;
+}
+
+header p{
+    font-size: 1.5rem;
+}
+
+header #open-closed, header h1{
+    text-shadow: 0px 0px 32px white;
+}
+
+.open-color{
+    color: darkgreen;
+    font-weight: bold;
+    text-shadow: 0px 0px 2px lightgreen;
+}
+
+.closed-color{
+    color: darkred;
+    font-weight: bold;
+}
+
+#footer-info-placeholder{
+    margin-top: 1.25rem;
 }
 
 nav{
     text-align: center;
     font-size: 5rem;
-    margin-top: -6rem;
-    margin-bottom: 1rem;
+    margin-top: -7.5rem;
+    margin-bottom: 2.25rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-between;
 }
 
 nav a{
-    background-color: purple;
+    font-weight: bold;
+    color: whitesmoke;
+    text-shadow: 0px 0px 16px darkslategrey;
+    text-decoration: none;
+
+    flex-grow: 1;
+    flex-basis: 33.332%;
+}
+
+nav a:hover{
+    color: darkslategrey;
+    text-decoration: underline;
+    text-shadow: 0px 0px 16px white;
 }
 
 section{
@@ -35,16 +83,38 @@ footer{
     text-align: center;
 }
 
-.footer-info{
+#footer-info{
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     align-content: space-between;
+    padding-bottom: 0.332rem;
 }
 
-.footer-info div{
-    background-color: grey;
+#footer-info div{
     font-size: 1.5rem;
     flex-grow: 1;
+    flex-basis: 33.332%;
+}
+
+
+#footer-info div a{
+    text-decoration: none;
+    color: darkslategrey;
+}
+
+#footer-info div a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: grey;
+}
+
+#location, #hours, #contact{
+    margin-bottom: -0.88rem;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    font-style: italic;
 }
