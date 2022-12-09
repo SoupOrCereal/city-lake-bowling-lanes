@@ -8,44 +8,50 @@
 
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather&family=Radio+Canada&display=swap">
+        <script src="js/jquery-3.6.1.min.js"></script>
     </head>
     <body>
 
         <header>
             <h1>City Lake Bowling Lanes</h1>
-            <p id="open-closed"><span class="open-color">Open</span> till 8pm</p>
+            <p id="open-closed"><span class="open-color">Open</span> till <span class="closed-color">Closed</span></p>
             <div id="footer-info-placeholder"></div>
         </header>
-
-        <nav>
-            <a href="#">Leagues</a>
-            <a href="#">Cosmic</a>
-            <a href="#">Parties</a>
-        </nav>
-          
-        <section>
-            <p>Content Here</p>
-        </section>
-          
-        <footer>
-            <div id="footer-info">
-                <div>
-                    <p id="location"><strong>Location</strong><br />¯</p>
-                    <p><a href="https://www.bing.com/maps?osid=6c285106-bc30-4ff0-b92d-e10e2638c45d&cp=42.015285%7E-80.352064&lvl=12.6&v=2&sV=2&form=S00027" target="_blank">4200 Pin Way<br />Lake City, PA, 16423</a></p>
-                </div>
-                <div>
-                    <p id="hours"><strong>Hours</strong><br />¯</p>
-                    <p>Mon-Thu 4pm till 10pm<br />Fri-Sun 1pm till 3am</p>
-                </div>
-                <div>
-                    <p id="contact"><strong>Contact</strong><br />¯</p>
-                    <p><a href="tel:+18143162168">Call (814)316-2168</a><br /><a href="mailto:eMail@CityLakeLanes.com?subject=About City Lake Bowling Lanes">eMail@CityLakeLanes.com</a></p>
-                </div>
-            </div>
-
-            <p>This bowling alley demo website was created by <a href="https://github.com/SoupOrCereal" target="_blank">Justin Sargent</a>.</p>
-        </footer>
         
-        <script src="js/indexStyling.js" async defer></script>
+        <noscript>
+            <p class="blink">This site uses JavaScript.<br/>Please 'enable scripts' for this site.</p>
+        </noscript>
+
+        <div id="nav-snippet"></div>
+        <script>
+            $("#nav-snippet").load("html/nav.html");
+        </script>
+        
+       <!-- pre-load content for SEO and instantly displaying when needed. -->
+        <section>
+            <div id="contentLeague"></div>
+            <script>
+                $("#contentLeague").load("html/league.html");
+            </script>
+            <div id="contentCosmic"></div>
+            <script>
+                $("#contentCosmic").load("html/cosmic.html");
+            </script>
+            <div id="contentOpen"></div>
+            <script>
+                $("#contentOpen").load("html/open.html");
+            </script>
+        </section>
+
+        <div id="footer-snippet"></div>
+        <script>
+            $("#footer-snippet").load("html/footer.html");
+        </script>
+
+        <!-- Scripts -->
+        <div id="scripts"></div>
+        <script>
+            $("#scripts").load("html/scripts.html");
+        </script>
     </body>
 </html>
