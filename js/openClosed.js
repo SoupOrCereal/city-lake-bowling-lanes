@@ -3,9 +3,9 @@
 
 /* script to change open/closed text, 'digital signage' */
 
-const htmlOpenTill10 = "<span class='open-color'>Open</span> till 10pm";
-const htmlOpenTill3 = "<span class='open-color'>Open</span> till 3am";
-const htmlClosed = "Currently <span class='closed-color'>Closed</span>";
+const htmlOpenTill10 = "<span><span class='open-color'>Open</span> till 10pm</span>";
+const htmlOpenTill3 = "<span><span class='open-color'>Open</span> till 3am</span>";
+const htmlClosed = "<span>Currently <span class='closed-color'>Closed</span></span>";
 
 // ? Add infrequent 'refresh' to keep making functional after page load
 

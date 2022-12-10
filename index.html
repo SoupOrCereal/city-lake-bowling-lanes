@@ -13,8 +13,8 @@
     <body>
 
         <header>
-            <h1>City Lake Bowling Lanes</h1>
-            <p id="open-closed"><span class="open-color">Open</span> till <span class="closed-color">Closed</span></p>
+            <a href="#"><h1 id="heading">City Lake Bowling Lanes</h1></a>
+            <p id="open-closed"><span><span class="open-color">Open</span> till <span class="closed-color">Closed</span></span></p>
             <div id="footer-info-placeholder"></div>
         </header>
         
@@ -29,17 +29,17 @@
         
        <!-- pre-load content for SEO and instantly displaying when needed. -->
         <section>
-            <div id="contentLeague"></div>
+            <div id="league"></div>
             <script>
-                $("#contentLeague").load("html/league.html");
+                $("#league").load("html/league.html");
             </script>
-            <div id="contentCosmic"></div>
+            <div id="cosmic"></div>
             <script>
-                $("#contentCosmic").load("html/cosmic.html");
+                $("#cosmic").load("html/cosmic.html");
             </script>
-            <div id="contentOpen"></div>
+            <div id="open"></div>
             <script>
-                $("#contentOpen").load("html/open.html");
+                $("#open").load("html/open.html");
             </script>
         </section>
 
