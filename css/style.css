@@ -147,6 +147,9 @@ nav a:hover{
     text-shadow: 0px 0px 16px white;
 }
 
+section{
+    margin-bottom: 1.5rem;
+}
 
 footer{
     text-align: center;
@@ -191,5 +194,4 @@ footer a:hover{
 
 #footer-note{
     font-style: italic;
-    margin-top: 0.69rem;
 }

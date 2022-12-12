@@ -52,8 +52,10 @@ function highligtNavLinks(currentURL){
     for(navLink of navLinks){
         if(currentURL.includes(navLink.id.toLowerCase().substring(3))){ // current id naming convention is btn<Nav>
             document.getElementById(navLink.id).style.color = "darkslategrey";
+            document.getElementById(navLink.id).style.textShadow = "0px 0px 8px whitesmoke";
         }else{
             document.getElementById(navLink.id).style.color = "whitesmoke";
+            document.getElementById(navLink.id).style.textShadow = "unset";
         }
     }
 }
