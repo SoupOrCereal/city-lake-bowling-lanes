@@ -1,12 +1,10 @@
-/* script to change open/closed text, 'digital signage' */
+/* Script to change open/closed text, 'digital signage' */
 
 var global_IsOpen;
 
 const htmlOpenTill10 = "<span><span class='open-color'>Open</span> till 10pm</span>";
 const htmlOpenTill3 = "<span><span class='open-color'>Open</span> till 3am</span>";
 const htmlClosed = "<span>Currently <span class='closed-color'>Closed</span></span>";
-
-// ? Add infrequent 'refresh' to keep making functional after page load
 
 updateOpenClosedSignage();
 function updateOpenClosedSignage(){
@@ -34,18 +32,8 @@ function updateOpenClosedSignage(){
         global_IsOpen = true;
     }
 
+    document.getElementById("open-closed").innerHTML = signSaying;
 
-
-    if(dayOfWeek == 0 || dayOfWeek >= 5){ // Sunday, Friday or Saturday - Open Late, so you can bowl great.™
-        if(hourOfDay >= 12 || hourOfDay < 3){
-            signSaying = htmlOpenTill3;
-        }else{
-            signSaying = htmlClosed;
-        }
-    }else{ // Typical hours
-        if(hourOfDay < 15 || hourOfDay > 21){
-            signSaying = htmlClosed;
-        }
-    }
-    $("#open-closed").html(signSaying);
+    // Infrequent updates to Open/Closed singage after page has loaded.
+    setTimeout(updateOpenClosedSignage, 2 * 60 * 1000); 
 }

@@ -1,8 +1,9 @@
-/* Router that works with nearly any input! */
+/* Site Router that works with nearly any given URL
+*   /page, #page, .compage, ?page...
+*/
 
-const triggerWords = ["league", "cosmic", "open"]; // also, IDs
-
-const navBtnIDs = ["btnLeague", "btnCosmic", "btnOpen", "heading", "open-closed"]; // don't need to be mapped to triggerWords
+const triggerWords = ["league", "cosmic", "open"]; // trigger words double as div IDs
+const navBtnIDs = ["btnLeague", "btnCosmic", "btnOpen", "heading"];
 
 
 // Register ClickEvent for Nav Links
@@ -10,15 +11,13 @@ navBtnIDs.forEach(id => {
     document.getElementById(id).onclick = navLinkClicked;
 });
 function navLinkClicked(e){
-    // Give it a moment for URL to reflect changes,
-    //      IF run routing() as soon as button clicked, will read URL right before the URL changes, so, simply wait a split second
-    setTimeout(figureOutRouting, 32);
+    setTimeout(figureOutRouting, 32); // Give it a split second for URL to reflect changes
 }
 
 figureOutRouting();
 
 function figureOutRouting(){
-    let currentURL = window.location.href.toLowerCase(); // could substring after ".com" if root domain includes trigger word, this was also works for local dev
+    let currentURL = window.location.href.toLowerCase(); // substring after ".com" if root domain includes a trigger word
     let routeID = null;
     triggerWords.forEach(function(triggerWord, forIndex){
         if(currentURL.includes(triggerWord)){
@@ -37,13 +36,11 @@ function figureOutRouting(){
 }
 
 function styleHeaaderImage(routeID){
-    // Formula, image file name header-<triggerWord>.jpg
+    // Image File Naming Convention is Formula "header-<triggerWord>.jpg"
     if(!routeID){ // home
-        document.getElementsByTagName("header")[0].style.backgroundImage = "url('../img/header.jpeg')";
-        //document.getElementsByTagName("header")[0].style.height = "idk";
+        document.getElementsByTagName("header")[0].style.backgroundImage = "url('./img/header.jpeg')";
     }else{
-        document.getElementsByTagName("header")[0].style.backgroundImage = "url('../img/header-"+triggerWords[triggerWords.indexOf(routeID)]+".jpg')";
-        //document.getElementsByTagName("header")[0].style.height = "55%";
+        document.getElementsByTagName("header")[0].style.backgroundImage = "url('./img/header-"+triggerWords[triggerWords.indexOf(routeID)]+".jpg')";
     }
 }
 

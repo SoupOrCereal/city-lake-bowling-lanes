@@ -1,4 +1,6 @@
-const startingHeaderHeight = "88%";//document.getElementsByTagName("header")[0].style.height;
+/* Scripted Styling */
+
+const startingHeaderHeight = "88%";
 const tabletWidth = 988;
 
 runLogic();

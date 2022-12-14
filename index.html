@@ -6,9 +6,9 @@
         <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather&family=Radio+Canada&display=swap">
-        <script src="js/jquery-3.6.1.min.js"></script>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather&family=Radio+Canada&display=swap" />
+        <script src="js/loadSnippet.js"></script>
     </head>
     <body>
 
@@ -23,35 +23,25 @@
         </noscript>
 
         <div id="nav-snippet"></div>
-        <script>
-            $("#nav-snippet").load("html/nav.html");
-        </script>
+        <script> global_LoadHTML("html/nav.html", "nav-snippet"); </script>
         
        <!-- pre-load content for SEO and instantly displaying when needed. -->
         <section>
             <div id="league"></div>
-            <script>
-                $("#league").load("html/league.html");
-            </script>
+            <script> global_LoadHTML("html/league.html", "league"); </script>
             <div id="cosmic"></div>
-            <script>
-                $("#cosmic").load("html/cosmic.html");
-            </script>
+            <script> global_LoadHTML("html/cosmic.html", "cosmic"); </script>
             <div id="open"></div>
-            <script>
-                $("#open").load("html/open.html");
-            </script>
+            <script> global_LoadHTML("html/open.html", "open"); </script>
         </section>
 
         <div id="footer-snippet"></div>
-        <script>
-            $("#footer-snippet").load("html/footer.html");
-        </script>
+        <script> global_LoadHTML("html/footer.html", "footer-snippet"); </script>
 
         <!-- Scripts -->
-        <div id="scripts"></div>
         <script>
-            $("#scripts").load("html/scripts.html");
+            let scriptsInOrder = ["js/styling.js", "js/openClosed.js", "js/navRouter.js", "js/currentOpenLanes.js"];
+            global_LoadQueueOfJS(scriptsInOrder);
         </script>
     </body>
 </html>
